@@ -1,0 +1,53 @@
+
+
+* {
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+	outline: none;
+	padding: 0;
+}
+
+input[type="checkbox"] {
+	cursor: pointer;
+	position: absolute;
+	top: 40px;
+	right: 100px;
+	-webkit-appearance: none;
+	z-index: 1;
+}
+
+input[type="checkbox"]:before {
+	background: #000;
+	content: 'Dark';
+	color: #fff;
+	padding: 10px 20px;
+	position: absolute;
+}
+
+input[type="checkbox"]:checked:before {
+	background: #fff;
+	content: 'Light';
+	color: #000;
+}
+
+input[type="checkbox"]:checked ~ * {
+	filter: invert(1);
+}
+
+section {
+	background: #fff;
+	left: 0;
+	min-height: 100vh;
+	padding: 80px 100px;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+section img {
+	filter: inherit;
+	float: left;
+	margin: 10px 20px 10px 0px;
+	max-width: 500px;
+}
